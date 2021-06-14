@@ -33,13 +33,9 @@ export default {};
 
 <style>
 .container{
-    width: 100%;
-    padding-right: var(--bs-gutter-x,1rem);
-    padding-left: var(--bs-gutter-x,1rem);
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 1rem;
-    margin-top: 1rem;
+    width: 94%;
+    margin: auto;
+    margin-top: 10px;
 }
 
 .navbar {
