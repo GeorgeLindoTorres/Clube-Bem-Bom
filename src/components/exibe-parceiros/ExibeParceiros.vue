@@ -5,11 +5,18 @@
             <h1 class="texto-chamada-parceiros">Muitas <span class="detalhe-chamada-parceiros">vantagens</span> e <span class="detalhe-chamada-parceiros">descontos</span> exclusivos</h1>
             </div>
      </div>
+     <card-parcerio></card-parcerio>
+     <card-parcerio></card-parcerio>
     </section>
 </template>
 
 <script>
-export default {};
+import CardParceiro from '../card-parceiro/CardParceiro.vue'
+export default {
+    components: {
+        'card-parcerio': CardParceiro
+    }
+};
 </script>
 
 <style>
