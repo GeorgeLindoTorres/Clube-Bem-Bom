@@ -8,6 +8,18 @@
                 <div class="accordion" id="accordionExample">
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
+                        <vsa-list class="btn btn-como-utilizar">
+            <!-- Here you can use v-for to loop through items  -->
+                                <vsa-item >
+                                <vsa-heading>
+                                    This is the heading
+                                </vsa-heading>
+
+                                <vsa-content>
+                                    This is the content
+                                </vsa-content>
+                            </vsa-item>
+                        </vsa-list>
                       <button class="btn btn-como-utilizar" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Como Utilizar
                       </button>
@@ -27,13 +39,27 @@
                       </div>
                     <a href="https://api.whatsapp.com/send?phone=5515991043885" class="btn btn-contato"><img src="img/call-icon.svg" class="call-icon"> contato</a>
                   </div>
-                </div>
+                </div>                
         </section>
 </template>
 
 <script>
+import {
+  VsaList,
+  VsaItem,
+  VsaHeading,
+  VsaContent,
+  VsaIcon
+} from 'vue-simple-accordion';
+import 'vue-simple-accordion/dist/vue-simple-accordion.css';
 export default {
-
+    components: {
+    VsaList,
+    VsaItem,
+    VsaHeading,
+    VsaContent,
+    VsaIcon
+  }
 }
 </script>
 
