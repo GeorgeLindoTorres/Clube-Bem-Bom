@@ -11,10 +11,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.svg$/,
-        loader: 'vue-svg-loader',
-       },
-      {
         test: /\.css$/,
         use: [
           'vue-style-loader',
