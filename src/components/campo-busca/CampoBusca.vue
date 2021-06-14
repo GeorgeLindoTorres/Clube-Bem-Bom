@@ -14,7 +14,6 @@
               <li><a class="dropdown-item" href="#">Lazer</a></li>
               <li><a class="dropdown-item" href="#">Serviços</a></li>
               <li><a class="dropdown-item" href="#">Saúde e Beleza</a></li>
-              <li><a class="dropdown-item" href="#">Serviços dash adhsudh audh uashdu</a></li>
             </ul>
           </div>         
     </Section>  
