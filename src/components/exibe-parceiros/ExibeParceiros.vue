@@ -28,7 +28,7 @@ export default {
 }
 
 .texto-chamada-parceiros {
-  padding-top: 1rem;
+  padding: 1rem 0 0.25rem 0;
   font-family: system-ui;
   font-style: italic;
   font-weight: bold;
@@ -36,7 +36,6 @@ export default {
   line-height: 29px;
   text-align: center;
   color: #000000;
-    padding-bottom: 2rem;
 }
 
 .detalhe-chamada-parceiros {
