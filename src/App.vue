@@ -2,17 +2,20 @@
   <div>
     <navbar></navbar>
     <campo-busca></campo-busca>
+    <exibe-parceiros></exibe-parceiros>
   </div>
 </template>
 
 <script>
 import Navbar from './components/navbar/Navbar.vue'
 import CampoBusca from './components/campo-busca/CampoBusca.vue'
+import ExibeParceiros from './components/exibe-parceiros/ExibeParceiros.vue'
 export default {
   name: 'app',
   components: {
     navbar: Navbar,
-    'campo-busca': CampoBusca
+    'campo-busca': CampoBusca,
+    'exibe-parceiros': ExibeParceiros
   },
   data () {
     return {
