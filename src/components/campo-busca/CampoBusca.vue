@@ -4,24 +4,40 @@
           <img type="button" src="../../assets/img/search-icon.svg" class="lupa-busca" alt="lupa">
           <input class="campo-busca" name="busca-principal" id="busca-principal" placeholder=" Pesquisar...">
           </div>
-
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle botao-segmentos" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Buscar por segmento 
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Educação</a></li>
-              <li><a class="dropdown-item" href="#">Lazer</a></li>
-              <li><a class="dropdown-item" href="#">Serviços</a></li>
-              <li><a class="dropdown-item" href="#">Saúde e Beleza</a></li>
-              <li><a class="dropdown-item" href="#">Serviços dash adhsudh audh uashdu</a></li>
-            </ul>
-          </div>         
+          <vue-dropdown class="botao-segmentos" textColor="white" :config="config"></vue-dropdown>
     </Section>  
 </template>
 
 <script>
+import VueDropdown from 'vue-dynamic-dropdown'
 export default {
+    components: {
+  VueDropdown
+},
+data: function() {
+    return {
+        config: {
+            options: [
+                {
+                    value: "Educação"
+                },
+                {
+                    value: "Lazer"
+                },
+                {
+                    value: "Serviços"
+                },
+                {
+                    value: "Saúde e Beleza"
+                },                
+            ],
+            prefix: "Buscar por segmento",
+            backgroundColor: "#005caa",
+            backgroundExpandedColor: "white",
+        }
+    }
+}
+
 
 }
 </script>
@@ -50,9 +66,6 @@ export default {
 }
 
 .botao-segmentos{
-    width: 100%;
-    background: #209532;
-    border-radius: 4px;
     margin-bottom: 1rem;
 }
 </style>
