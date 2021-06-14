@@ -1,15 +1,18 @@
 <template>
   <div>
     <navbar></navbar>
+    <campo-busca></campo-busca>
   </div>
 </template>
 
 <script>
 import Navbar from './components/navbar/Navbar.vue'
+import CampoBusca from './components/campo-busca/CampoBusca.vue'
 export default {
   name: 'app',
   components: {
-    navbar: Navbar
+    navbar: Navbar,
+    'campo-busca': CampoBusca
   },
   data () {
     return {
