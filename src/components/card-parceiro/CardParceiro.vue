@@ -5,39 +5,29 @@
               <div class="card-body">
                 <h5 class="nome-parceiro-card">Facens</h5>
                 <p class="texto-beneficio-card">Até 20% de desconto*</p>
-                <div class="accordion" id="accordionExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <vsa-list class="btn btn-como-utilizar">
+                <vsa-list class="btn-utilizar">
             <!-- Here you can use v-for to loop through items  -->
-                                <vsa-item >
+                                <vsa-item>
                                 <vsa-heading>
-                                    This is the heading
+                                    COMO UTILIZAR
                                 </vsa-heading>
 
                                 <vsa-content>
-                                    This is the content
+                                  <div class="texto-beneficio">
+                                    <p>Apresente o seu holerite e/ou o cartão de associado do clube no ato da matrícula.
+                                    Benefícios do convênio:</p>
+                                      <p>- 10 % de desconto na graduação.</p>
+                                      <p> - 20% de desconto na Pós.</p>
+                                      <p> Contato: Pamela </p>
+                                      <p> Telefone: 15 3346-1220 </p>
+                                      <p> Endereço: Rodovia Senador José Ermírio de Moraes, 1425 - Jardim Constantino Matucci, Sorocaba - SP, 18085-784</p>
+                                  </div>
                                 </vsa-content>
                             </vsa-item>
-                        </vsa-list>
-                      <button class="btn btn-como-utilizar" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Como Utilizar
-                      </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <p>Apresente o seu holerite e/ou o cartão de associado do clube no ato da matrícula.
-                            Benefícios do convênio:</p>
-                              <p>- 10 % de desconto na graduação.</p>
-                              <p> - 20% de desconto na Pós.</p>
-                              <p> Contato: Pamela </p>
-                              <p> Telefone: 15 3346-1220 </p>
-                              <p> Endereço: Rodovia Senador José Ermírio de Moraes, 1425 - Jardim Constantino Matucci, Sorocaba - SP, 18085-784</p>
-                          </div>
+                        </vsa-list>              
+                        <div class="btn btn-contato"> 
+                          <a class="btn-contato-link" href="https://api.whatsapp.com/send?phone=5515991043885"><img src="src\assets\img\call-icon.svg" class="call-icon">contato</a>
                         </div>
-                      </div>
-                      </div>
-                    <a href="https://api.whatsapp.com/send?phone=5515991043885" class="btn btn-contato"><img src="img/call-icon.svg" class="call-icon"> contato</a>
                   </div>
                 </div>                
         </section>
@@ -49,7 +39,7 @@ import {
   VsaItem,
   VsaHeading,
   VsaContent,
-  VsaIcon
+  
 } from 'vue-simple-accordion';
 import 'vue-simple-accordion/dist/vue-simple-accordion.css';
 export default {
@@ -58,12 +48,24 @@ export default {
     VsaItem,
     VsaHeading,
     VsaContent,
-    VsaIcon
+    
   }
 }
 </script>
 
 <style>
+.vsa-item__content {
+    background-color: white;
+}
+.btn-utilizar{
+      --vsa-max-width: 720px;
+      --vsa-min-width: none;
+      --vsa-bg-color: #005caa;
+      --vsa-text-color: white;
+      --vsa-highlight-color: #fff;      
+      color: black;
+      border-radius: .25rem;
+}
 .flex{
     display: flex;
     flex-wrap: wrap;
@@ -109,7 +111,16 @@ export default {
     line-height: 25px;
     color: #000000;
 }
-
+.texto-beneficio{
+   margin-bottom: 1rem;    
+   font-weight: 300;
+   font-size: 20px;
+   line-height: 23px;   
+   color: #000000;
+}
+.texto-beneficio p {
+  padding: .5rem;
+}
 .texto-beneficio-card{
     margin-bottom: 1rem;    
     font-style: italic;
@@ -140,7 +151,6 @@ export default {
     margin-top: .5rem;
     width: 100%;
     background: #209532;
-    font-family: Ubuntu;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -148,14 +158,21 @@ export default {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: .5rem;
-    color: #FFFFFF;
-        text-decoration: none;
     border: 1px solid transparent;
-    padding: .375rem .75rem;
+    padding: .75rem 0;
     border-radius: .25rem;
+}
+.btn-contato-link{
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .btn-contato:hover{
     color: #FFFFFF;
+}
+
+.vsa-item__trigger__content {
+    font-weight: 600;
+    font-size: 1rem;
 }
 </style>
