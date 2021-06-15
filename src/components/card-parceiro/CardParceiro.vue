@@ -63,6 +63,7 @@ export default {
     color: #ffffff;
 }
 .btn-utilizar{
+    --vsa-heading-padding: 0.75rem .75rem;
       --vsa-max-width: 720px;
       --vsa-min-width: none;
       --vsa-bg-color: #005caa;
@@ -125,10 +126,11 @@ export default {
    color: #000000;
 }
 .texto-beneficio p {
-  padding: .5rem;
-  text-align: left;
-    font: menu;
-    font-size: small;
+    padding: .5rem;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
 }
 .texto-beneficio-card{
     margin-bottom: 1rem;    
