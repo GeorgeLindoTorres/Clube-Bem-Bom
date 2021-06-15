@@ -57,6 +57,11 @@ export default {
 .vsa-item__content {
     background-color: white;
 }
+.vsa-item__trigger:focus, .vsa-item__trigger:hover {
+    outline: none;
+    background-color: #005caa;
+    color: #ffffff;
+}
 .btn-utilizar{
       --vsa-max-width: 720px;
       --vsa-min-width: none;
@@ -65,6 +70,7 @@ export default {
       --vsa-highlight-color: #fff;      
       color: black;
       border-radius: .25rem;
+      text-align: center;      
 }
 .flex{
     display: flex;
@@ -99,7 +105,7 @@ export default {
 
 .call-icon{
     width: 16px;
-    margin-right: 3px;
+    margin-right: 9px;
     
 }
 
@@ -120,6 +126,9 @@ export default {
 }
 .texto-beneficio p {
   padding: .5rem;
+  text-align: left;
+    font: menu;
+    font-size: small;
 }
 .texto-beneficio-card{
     margin-bottom: 1rem;    
@@ -145,6 +154,7 @@ export default {
     border: 1px solid transparent;
     padding: .375rem .75rem;
     border-radius: .25rem;
+    text-align: center;
 }
 
 .btn-contato{
@@ -173,6 +183,10 @@ export default {
 
 .vsa-item__trigger__content {
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.2rem;
+}
+.vsa-item__heading, .vsa-item__trigger {
+    display: inline;
+  
 }
 </style>
