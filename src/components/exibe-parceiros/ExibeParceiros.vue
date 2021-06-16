@@ -14,7 +14,17 @@ import CardParceiro from '../card-parceiro/CardParceiro.vue'
 export default {
     components: {
         'card-parcerio': CardParceiro
+    },
+  data() {
+    return{
+      parceiros: []
     }
+  },
+  created() {
+    this.$http.get('http://localhost:3000/v1/parceiros')
+      .then(res => res.json())
+      .then(parceiros => this.parceiros = parceiros);
+  }  
 };
 </script>
 
