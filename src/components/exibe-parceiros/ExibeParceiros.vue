@@ -5,7 +5,11 @@
             <h1 class="texto-chamada-parceiros">Muitas <span class="detalhe-chamada-parceiros">vantagens</span> e <span class="detalhe-chamada-parceiros">descontos</span> exclusivos</h1>
             </div>
      </div>
-     <card-parcerio></card-parcerio>     
+     <ul>
+       <li v-for="parceiro of parceiros">
+     <card-parceiro :imagem="parceiro.imagem" :nome="parceiro.nome" :beneficio="parceiro.beneficio" :comoUtiliza="parceiro.comoUtiliza" :contato="parceiro.contato" :telefone="parceiro.telefone" :endereco="parceiro.endereco" :whatsapp="parceiro.whatsapp"></card-parceiro>
+       </li>
+     </ul>     
     </section>
 </template>
 
@@ -13,17 +17,17 @@
 import CardParceiro from '../card-parceiro/CardParceiro.vue'
 export default {
     components: {
-        'card-parcerio': CardParceiro
+        'card-parceiro': CardParceiro
     },
   data() {
     return{
-      parceiros: []
+      parceiros:[],
     }
   },
   created() {
     this.$http.get('http://localhost:3000/v1/parceiros')
       .then(res => res.json())
-      .then(parceiros => this.parceiros = parceiros);
+      .then(parceiros => this.parceiros = parceiros, err => console.log(err));
   }  
 };
 </script>
