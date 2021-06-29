@@ -1,8 +1,8 @@
 <template>
   <div>
-    <navbar></navbar>
-    <campo-busca></campo-busca>
+    <navbar></navbar>   
     <exibe-parceiros></exibe-parceiros>
+    <div class="fundo"></div>
   </div>
 </template>
 
@@ -63,5 +63,9 @@ blockquote, q {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+.fundo {
+  background-color: #e5e5e5;
+  height: 25rem;
 }
 </style>
