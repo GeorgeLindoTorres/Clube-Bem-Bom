@@ -13,7 +13,7 @@
             <h1 class="texto-chamada-parceiros">Muitas <span class="detalhe-chamada-parceiros">vantagens</span> e <span class="detalhe-chamada-parceiros">descontos</span> exclusivos</h1>
             </div>
      </div>
-     <ul>
+     <ul class="layout-cards">
        <li v-for="parceiro of parceirosComFiltro">
      <card-parceiro :imagem="parceiro.imagem" :nome="parceiro.nome" :beneficio="parceiro.beneficio" :comoUtiliza="parceiro.comoUtiliza" :contato="parceiro.contato" :telefone="parceiro.telefone" :endereco="parceiro.endereco" :whatsapp="parceiro.whatsapp"></card-parceiro>
        </li>
@@ -95,7 +95,11 @@ export default {
 .detalhe-chamada-parceiros {
   color: #209532;
 }
-
+.layout-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 .center {
   text-align: center;
 }
