@@ -2,7 +2,7 @@
     <section class="secao-busca container center">
           <div class="busca-junta-lupa-texto">
           <img type="button" src="../../assets/img/search-icon.svg" class="lupa-busca" alt="lupa">
-          <input class="campo-busca" name="busca-principal" id="busca-principal" placeholder=" Pesquisar...">
+          <input class="campo-busca" v-on:input="filtro = $event.target.value" name="busca-principal" id="busca-principal" placeholder=" Pesquisar...">          
           </div>
           <vue-dropdown class="botao-segmentos" textColor="white" :config="config"></vue-dropdown>
     </Section>  
@@ -16,6 +16,7 @@ export default {
 },
 data: function() {
     return {
+        filtro: "",
         config: {
             options: [
                 {
@@ -36,9 +37,19 @@ data: function() {
             backgroundExpandedColor: "white",
         }
     }
-}
+},
+    computed: {
 
+        parceirosComFiltro() {
+            if(this.filtro) {
+                let exp = new RegExp(this.filtro.trim(), 'i');
+                return this.parceiros.filter(parceiro => exp.test(paceiro.nome))
+            } else {
+                return this.parceiros
+            }
+        }
 
+    }
 }
 </script>
 
