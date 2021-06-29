@@ -1,7 +1,7 @@
 <template>
   <section id="card-parceiros" class="flex">
     <div class="card card-convenio">
-      <img :src="imagem" class="card-img-top" alt="..." />
+      <img :src="imagem" class="card-img-top" alt="imagem do parceiro" />
       <div class="card-body">
         <h5 class="nome-parceiro-card">{{ nome }}</h5>
         <p class="texto-beneficio-card">{{ beneficio }}</p>
@@ -176,6 +176,11 @@ export default {
 
 .btn-contato:hover {
   color: #ffffff;
+}
+
+.card-img-top {
+  height: 180px;
+  
 }
 
 .vsa-item__trigger__content {
